@@ -29,9 +29,6 @@ class Dice():
     def double_same_throw(self):
         return self.throw() == self.throw()
 
-    def __str__(self):
-        return "Dice with {} sides".format(self.__sides_number)
-
 class Fighter():
     '''
     Class create Fighter
@@ -119,9 +116,7 @@ class Arena():
             print('Game is over !')
             print('#'*40)
 
-def main():
-    arena = Arena(5)
-    arena.play()
-
 if __name__ == '__main__':
-    main()
+    inpt = int(input('How much players ? (2-15): '))
+    arena = Arena(inpt)
+    arena.play()
